@@ -69,14 +69,14 @@ namespace Translator
             {
                 TranslationServiceClient client = new TranslationServiceClientBuilder
                 {
-                    JsonCredentials = "{'credentials Here'}"
+                    JsonCredentials = "{}"
                 }.Build();
                 TranslateTextRequest request = new TranslateTextRequest
                 {
                     Contents = { message },
                     SourceLanguageCode = "id",     //Put language to translate here
                     TargetLanguageCode = "en-US",
-                    Parent = new ProjectName("api-project-295373349652").ToString()
+                    Parent = new ProjectName("Project Name Here").ToString()
                 };
                 TranslateTextResponse response = client.TranslateText(request);
                 Translation translation = response.Translations[0];
